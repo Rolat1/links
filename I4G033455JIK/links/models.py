@@ -13,7 +13,6 @@ class Link(models.Model):
     active = models.BooleanField(default=True)
 
     def save(self, *args, **kwargs):
-        self.identifier = slugify(self.target_url)
         super().save(*args, **kwargs)
         pass
 
